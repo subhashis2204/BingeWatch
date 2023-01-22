@@ -31,7 +31,7 @@
 
 .movie-details ul li {
     padding: 0 1rem;
-    background-image: url('./images/list_bullet.svg');
+    background-image: url('../images/list_bullet.svg');
     background-position: 0 50%;
     background-size: 5px 5px;
     background-repeat: no-repeat;
