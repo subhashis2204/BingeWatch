@@ -1,0 +1,14 @@
+body {
+    background-color: black;
+    background: url('./images/romcom_bg5.svg');
+    background-position: center;
+    background-size: cover;
+}
+
+@media (max-width: 480px) {
+    body {
+        background: url('./images/romcom_bgm.svg');
+        background-position: center;
+        background-size: cover;
+    }
+}
