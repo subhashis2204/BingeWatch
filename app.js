@@ -2,7 +2,7 @@ const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 const navbar = document.querySelector('.navbar')
 const sticky = navbar.offsetTop
-const loading = document.querySelector('#loading')
+
 
 document.querySelectorAll('.carousel').forEach(carousel => {
     console.log(carousel)
@@ -71,7 +71,3 @@ const nextSlide = function() {
 }
 
 setInterval(nextSlide, 5000)
-
-function loader() {
-    loading.style.display = 'none'
-}
