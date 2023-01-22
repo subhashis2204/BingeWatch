@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.movie-details {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    margin-left: 5%;
+}
+
+.movie-details--rating {
+    border: 1px solid white;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+.movie-details * {
+    font-size: 17px;
+    font-family: 'Inter', sans-serif;
+}
+
+.movie-details ul {
+    display: flex;
+    list-style-type: none;
+    margin-left: 1rem;
+}
+
+.movie-details ul li {
+    padding: 0 1rem;
+    background-image: url('../images/list_bullet.svg');
+    background-position: 0 50%;
+    background-size: 5px 5px;
+    background-repeat: no-repeat;
+}
+
+.movie {
+    background-color: #1F1F1F;
+    color: white;
+    /* min-height: 500vh; */
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 100px 400px minmax(400px, auto) minmax(100px, auto) minmax(100px, auto) minmax(100px, auto) minmax(100px, auto);
+    grid-template-areas: "title" "details" "trailer" "description" "cast" "watch" "reviews" "recommended";
+    padding-bottom: 1rem;
+}
+
+.movie-details-title {
+    grid-area: title;
+    margin: auto 5%;
+    font-size: 60px;
+    font-weight: 600px;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.movie-details {
+    grid-area: details;
+}
+
+.movie-trailer {
+    grid-area: trailer;
+}
+
+.movie-description {
+    grid-area: description;
+}
+
+.movie-details {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movie-details--stars {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto 0;
+}
+
+.movie-details--stars p {
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 0.5rem;
+}
+
+.movie-trailer iframe {
+    height: 100%;
+    width: 100%;
+}
+
+.movie-description {
+    display: grid;
+    grid-template-columns: 0.35fr 0.65fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "poster description";
+}
+
+.movie-description--poster {
+    grid-area: poster;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.movie-description--poster img {
+    width: min(100%, 280px);
+    padding: 1rem;
+}
+
+.movie-description--content {
+    grid-area: description;
+    padding: 1rem;
+    margin: auto 0;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.movie-description--content h2 {
+    font-size: 1.8rem;
+}
+
+.movie-cast {
+    grid-area: cast;
+    font-family: 'IBM Plex Sans', sans-serif;
+    margin: 1rem 5%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.movie-cast-names {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.movie-cast-names li {
+    /* margin: 0 1rem 0 0; */
+    font-size: 1.2rem;
+    padding: 0.3rem 0.5rem;
+    border: 2px solid aqua;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.movie-cast-names li:hover {
+    /* margin: 0 1rem 0 0; */
+    border: 2px solid white;
+}
+
+.movie-watch {
+    grid-area: watch;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: 5%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.movie-watch>h2 {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.movie-watch-areas>span {
+    font-size: 1.2rem;
+    padding: 0.3rem 0.5rem;
+    border: 2px solid aqua;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.movie-reviews {
+    grid-area: reviews;
+}
+
+.recommended {
+    grid-area: recommended;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-btn {
+    padding: 0.8rem 1rem;
+    /* margin: 0 auto; */
+}
+
+.back-btn a {
+    color: black;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.movie {
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.movie-reviews {
+    grid-area: reviews;
+    margin: 1rem 5%;
+}
+
+.review {
+    background-color: #333333;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.review-title {
+    background-color: #292828;
+    margin: 1rem 0.5rem;
+    padding: 1rem 0.5rem;
+    font-size: 1.2rem;
+}
+
+.review-comment {
+    margin: 1rem 0.5rem;
+    padding: 1rem 0.5rem;
+}
+
+.back-btn {
+    grid-area: recommended;
+}
+
+@media (max-width: 600px) {
+    .movie-description {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 0.5fr;
+        grid-template-areas: "poster" "description";
+    }
+    .movie-description--content {
+        grid-area: description;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 720px) {
+    .movie {
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 100px 500px minmax(400px, auto);
+    }
+    .movie-description {
+        font-size: 1.2rem;
+    }
+}
