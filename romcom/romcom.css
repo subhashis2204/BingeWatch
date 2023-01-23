@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap');
 body {
     background-color: black;
     background: url('./images/romcom_bg5.svg');
@@ -14,13 +15,16 @@ body {
 
 .back-btn button {
     padding: 0.8rem 1rem;
-    /* margin: 0 auto; */
+    border-radius: 10px;
+    border: none;
+    background-color: #30353C;
 }
 
 .back-btn button a {
     font-size: 20px;
-    color: black;
+    color: white;
     text-decoration: none;
+    font-family: 'IBM Plex Sans', sans-serif;
 }
 
 @media (max-width: 480px) {

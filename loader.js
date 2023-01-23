@@ -20,5 +20,5 @@ anime({
 
 
 function loader() {
-    setTimeout(removeloader, 2000)
+    setTimeout(removeloader, 1000)
 }
